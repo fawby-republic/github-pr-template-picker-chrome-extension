@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Github PR Template Picker",
+  "version": "1.0",
+  "description": "Pick PR templates from a custom dropdown on GitHub.",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*/*"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["config.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
